@@ -4,6 +4,7 @@ const app = express();
 const mongoose = require('mongoose');
 const cors = require('cors');
 
+app.use(express.static(path.join(__dirname, 'public')))
 app.use(cors())
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
